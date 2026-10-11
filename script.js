@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           <div class="modal-section">
             <h4>Key Impact &amp; Results</h4>
-            <p style="font-weight: 700; color: #ffffff;">${data.results}</p>
+            <p style="font-weight: 700; color: var(--text-primary);">${data.results}</p>
           </div>
 
           <div class="modal-actions">
@@ -307,11 +307,11 @@ Can we discuss feasibility and get started?`;
   presetBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       presetBtns.forEach(b => {
-        b.style.borderColor = 'var(--border-subtle)';
-        b.style.background = 'rgba(255, 255, 255, 0.04)';
+        b.style.borderColor = 'var(--border-light)';
+        b.style.background = '#ffffff';
       });
       btn.style.borderColor = 'var(--accent-gold)';
-      btn.style.background = 'rgba(245, 158, 11, 0.2)';
+      btn.style.background = '#fef3c7';
 
       const topic = btn.getAttribute('data-topic');
       if (directConnectBtn) {
