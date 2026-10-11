@@ -2,7 +2,8 @@
 
 Official modern creative portfolio of **Shree Shyam** — featuring high-impact **Video Editing**, full-stack **Web & Software Development**, and data-driven **Digital Marketing & Growth**.
 
-🔗 **Live Website (GitHub Pages)**: [https://rajatsharma070904.github.io/maharaja/](https://rajatsharma070904.github.io/maharaja/)
+🔗 **Live Website (GitHub Pages)**: [https://rajatsharma070904.github.io/shreeshyam/](https://rajatsharma070904.github.io/shreeshyam/)  
+📦 **GitHub Repository**: [https://github.com/RajatSharma070904/shreeshyam](https://github.com/RajatSharma070904/shreeshyam)
 
 ## 🌟 Core Pillars
 
