@@ -2070,35 +2070,41 @@ header.scrolled {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
   color: #ffffff !important;
-  padding: 16px 36px;
+  padding: 17px 40px;
   border-radius: 9999px;
-  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 850;
-  font-size: 16px;
+  font-size: 16.5px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-decoration: none !important;
-  box-shadow: 0 14px 40px rgba(5, 150, 105, 0.45), 0 0 20px rgba(16, 185, 129, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 14px 40px rgba(16, 185, 129, 0.55), 0 0 25px rgba(5, 150, 105, 0.4);
+  border: 2.5px solid rgba(255, 255, 255, 0.65);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, background 0.25s ease;
+  animation: pill-glow-pulse 3s infinite;
+  backdrop-filter: blur(10px);
   cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .sticky-whatsapp-pill:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 18px 48px rgba(5, 150, 105, 0.6), 0 0 28px rgba(16, 185, 129, 0.5);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(16, 185, 129, 0.7), 0 0 40px rgba(5, 150, 105, 0.6);
   background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  border-color: rgba(255, 255, 255, 0.9);
   color: #ffffff !important;
 }
 
 .sticky-whatsapp-pill .wa-pill-icon {
-  width: 26px;
-  height: 26px;
+  width: 27px;
+  height: 27px;
   flex-shrink: 0;
   fill: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .sticky-whatsapp-pill .pill-text {
@@ -2108,6 +2114,18 @@ header.scrolled {
   color: #ffffff !important;
   letter-spacing: inherit;
   line-height: 1;
+}
+
+@keyframes pill-glow-pulse {
+  0% {
+    box-shadow: 0 14px 40px rgba(16, 185, 129, 0.5), 0 0 0 0 rgba(16, 185, 129, 0.65);
+  }
+  50% {
+    box-shadow: 0 18px 48px rgba(16, 185, 129, 0.65), 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 14px 40px rgba(16, 185, 129, 0.5), 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
 /* ==========================================================================

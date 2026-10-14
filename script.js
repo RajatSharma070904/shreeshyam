@@ -356,11 +356,8 @@ Can we discuss feasibility and get started?`;
   // ------------------------------------------------------------------------
   const floatingDock = document.getElementById('floatingDock');
   if (floatingDock) {
-    floatingDock.style.opacity = '0';
-    setTimeout(() => {
-      floatingDock.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-      floatingDock.style.opacity = '1';
-    }, 200);
+    floatingDock.style.opacity = '1';
+    floatingDock.style.visibility = 'visible';
   }
 
 });
