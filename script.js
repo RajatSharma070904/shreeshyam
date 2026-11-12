@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const WA_BASE_URL = 'https://wha.life/luckey';
+  const WA_BASE_URL = 'https://wa.me/918290422036';
 
   // ------------------------------------------------------------------------
   // 1. STICKY HEADER & SCROLL BEHAVIOR
@@ -359,5 +359,20 @@ Can we discuss feasibility and get started?`;
     floatingDock.style.opacity = '1';
     floatingDock.style.visibility = 'visible';
   }
+
+  // ------------------------------------------------------------------------
+  // 9. WHATSAPP CLICK TRACKING (DATA LAYER PUSH FOR GTM)
+  // ------------------------------------------------------------------------
+  document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'whatsapp_click',
+          button_id: link.id || 'whatsapp_btn',
+          button_text: (link.innerText || '').trim()
+        });
+      }
+    });
+  });
 
 });
